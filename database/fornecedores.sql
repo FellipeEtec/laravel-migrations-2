@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2025 at 09:56 PM
+-- Generation Time: Aug 16, 2025 at 10:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -60,7 +60,9 @@ CREATE TABLE `cadastro` (
   `nome` varchar(50) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   `telefone` varchar(20) NOT NULL,
-  `cnpj` varchar(20) NOT NULL
+  `cnpj` varchar(20) NOT NULL,
+  `razaosocial` varchar(100) DEFAULT NULL,
+  `nomefantasia` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -146,12 +148,12 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '0001_01_01_000000_create_users_table', 1),
-(2, '0001_01_01_000001_create_cache_table', 1),
-(3, '0001_01_01_000002_create_jobs_table', 1),
-(4, '2025_08_16_193133_create_cadastro_table', 1),
-(5, '2025_08_16_193820_create_estoque_table', 1),
-(6, '2025_08_16_194907_add_razao_social_and_nome_fantasia_to_cadastro_table', 1);
+(7, '0001_01_01_000000_create_users_table', 1),
+(8, '0001_01_01_000001_create_cache_table', 1),
+(9, '0001_01_01_000002_create_jobs_table', 1),
+(10, '2025_08_16_193133_create_cadastro_table', 1),
+(11, '2025_08_16_193820_create_estoque_table', 1),
+(12, '2025_08_16_194907_add_razao_social_and_nome_fantasia_to_cadastro_table', 1);
 
 -- --------------------------------------------------------
 
@@ -305,7 +307,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`

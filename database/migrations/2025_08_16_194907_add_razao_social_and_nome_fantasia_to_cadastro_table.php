@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cadastro', function (Blueprint $table) {
-            //
+            $table->string('razaosocial', 100)->nullable();
+            $table->string('nomefantasia', 50)->nullable();
         });
     }
 
